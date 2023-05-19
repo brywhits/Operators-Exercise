@@ -2,26 +2,36 @@
 {
     public class Program
     {
-        static void Main(string[] args)
-        {
-             int a = 17;
-            int b = 4;
-            int quotient = a / b;
-            int remainder = a % b;
 
-            if (a == 17 && b == 4)
-            {
-                Console.WriteLine($"{a} / {b} is {quotient} remainder {remainder}.");
-            }
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("What is the radius of your circle?");
+
+            var radius = double.Parse(Console.ReadLine());
+
+            var myCalledMethod = AreaOfCircle(radius);
+            Console.WriteLine(myCalledMethod);
+
+        }
+
+        public static double AreaOfCircle(double radius)
+        {
+            var area = Math.PI * radius * radius;
+            return area;
         }
 
         
 
-
-       
-            
-
-            
         
+
+
+
+
+
+
+
+
+
+
     }
 }
